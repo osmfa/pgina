@@ -19,3 +19,13 @@ Installer/Output
 
 # Installer pre-processor
 Installer/PreprocessedpGina0.iss
+/pGina/src/Service/Impl/.vs
+/pGina/src/Service/Console/.vs
+/pGina/src/InstallUtility/.vs
+/pGina/src/Abstractions/.vs
+/pGina/src/Configuration/.vs
+/pGina/src/Shared/.vs
+/pGina/src/Service/Service/.vs
+/pGina/src/Core/.vs
+/pGina/src/.vs
+/pGina/src/CredentialProviderRegistration/.vs
