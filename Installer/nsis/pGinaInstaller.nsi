@@ -70,8 +70,9 @@ FunctionEnd
 #############################################
 
 Section -Prerequisites
-  # Check for and install .NET 4
-  !insertmacro CheckNetFramework 40Full
+  # Check for and install .NET 4.8
+  !insertmacro CheckNetFramework 48
+  !insertmacro CheckNetFrameworkDelayRestart 48 $0 ; Returns if an install was performed
 SectionEnd
 
 Section "pGina" InstallpGina 
@@ -111,13 +112,13 @@ SectionEnd
 Section /o "Visual C++ redistributable package" InstallVCRedist
   SetOutPath $INSTDIR 
   ${If} ${RunningX64}
-     File "vcredist_x64.exe"
-     ExecWait "$INSTDIR\vcredist_x64.exe"
-     Delete $INSTDIR\vcredist_x64.exe
+     File "VC_redist.x64.exe"
+     ExecWait "$INSTDIR\VC_redist.x64.exe"
+     Delete $INSTDIR\VC_redist.x64.exe
   ${Else}
-     File "vcredist_x86.exe"
-     ExecWait "$INSTDIR\vcredist_x86.exe"
-     Delete $INSTDIR\vcredist_x86.exe
+     File "VC_redist.x86.exe"
+     ExecWait "$INSTDIR\VC_redist.x86.exe"
+     Delete $INSTDIR\VC_redist.x86.exe
   ${EndIf}
 SectionEnd
 

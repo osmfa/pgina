@@ -16,6 +16,7 @@ build/
 
 # Installer output
 Installer/Output
+Installer/nsis/pGina-3.2.4.1-setup.exe
 
 # Installer pre-processor
 Installer/PreprocessedpGina0.iss
